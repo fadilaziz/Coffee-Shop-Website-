@@ -30,3 +30,12 @@ This website brings the warm and cozy atmosphere of a real coffee shop to the we
 ---
 
 ## 🗂️ Folder Structure
+coffee-shop-website/
+├── index.html
+├── css/
+│ └── style.css
+├── js/
+│ └── main.js
+├── images/
+│ └── (your image files)
+└── README.md
