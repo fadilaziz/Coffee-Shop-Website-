@@ -22,8 +22,8 @@ nav {
     width: auto;
 }
 
-ion-icon {
-    cursor: pointer;
+
+.element-1 {
     display: none;
     visibility: hidden;
 }
@@ -33,7 +33,7 @@ ion-icon {
     align-items: center;
     gap: 10px;
     border: 2px solid var(--warna-utama);
-    padding: 10px;
+    padding: 8px;
     border-radius: 50px;
 }
 
@@ -203,7 +203,6 @@ figure img {
     max-width: 1440px;
     margin: 0px auto;
     width: auto;
-    border: 1px black solid;
 }
 
 .container-info > div {
@@ -212,7 +211,6 @@ figure img {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    border: 1px black solid;
 }
     
 
@@ -220,7 +218,6 @@ figure img {
     display: flex;
     justify-content: center;
     gap: 50px;
-    border: 1px black solid;
 }
 
 .container-info article h1 {
@@ -245,14 +242,21 @@ figure img {
 
 /*Product*/
 .container-product {
+    padding: 50px 140px 30px 140px;
+    position: relative;
+    max-width: 1440px;
+    margin: 0px auto;
     width: auto;
     border: 1px black solid;
-    padding: 50px 140px 30px 140px;
 }
 
 .container-search {
     border: 1px black solid;
     width: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
 }
 .search-bar {
     display: flex;
@@ -275,7 +279,11 @@ figure img {
 }
 
 .product {
-    padding: 20px;
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: auto;
 }
 
 .card-product {
@@ -286,13 +294,20 @@ figure img {
     border: var(--warna-utama) 2px solid;
     padding: 10px;
     width: auto;
-    border-radius: 15px;
+    height: auto;
+    border-radius: 25px;
 }
 
 .card-product figure {
     background-color: var(--warna-latar);
-    border-radius: 10px;
+    border-radius: 20px;
+    height: 300px;
     padding: 20px 30px;
+}
+
+.card-product figure img {
+    width: 180px;
+    
 }
 
 .card-product h3 {
@@ -310,6 +325,7 @@ figure img {
 .card-product > p {
     font-size: 20px;
     font-weight: 500;
+    margin-top: 2px;
 }
 .card-product span p {
     color: gray;
@@ -318,21 +334,9 @@ figure img {
     color:rgb(0, 255, 0);
 }
 
-.card-product img  {
-    width: 150px;
-    border-radius: 10px;
-}
 
-.buy-button button {
-    background-color: var(--warna-utama);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-size: medium;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 5px 0px;
+.buy-button {
+    margin-top: 10px;
 }
 
 .buy-button1 {
@@ -341,6 +345,8 @@ figure img {
     border: none;
     padding: 10px 20px;
     border-radius: 50px;
+    width: 100%;
+    cursor: pointer;
 }
 
 .buy-button2 {
@@ -352,6 +358,8 @@ figure img {
     font-size: medium;
     cursor: pointer;
     margin: 5px 0px;
+    width: 100%;
+    cursor: pointer;
 }
 
 
@@ -362,6 +370,10 @@ figure img {
     nav {
         font-size: 12px;
         padding: 0px 35px 0px 0px;
+    }
+    .profile {
+        padding: 6px;
+        font-size: 15px;
     }
     .hero {
         padding: 70px 0px;
@@ -391,11 +403,16 @@ figure img {
     }
 
     .container-info {
-        padding:0px 50px;
+        padding:50px 50px;
     }
 
     .container-info article h1 {
         font-size: 35px;
+    }
+
+    /*Product*/
+    .container-product {
+        padding: 50px 50px;
     }
 
 }
@@ -412,7 +429,37 @@ figure img {
         justify-content: space-between;
         padding: 0px;
         margin: 0px;
-        margin :0px px 0px 0px;
+        margin :0px 0px 0px 0px;
+    }
+
+    nav > .element-1 {
+        width: 100%;
+    }
+    nav > .element-2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    nav > .element-3 {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .element-1 {
+        display: block;
+        visibility: visible;
+    }
+
+    .element-1 > ion-icon {
+        margin-left:30px ;
+        color: black;
+        width: 35px;
+        height: 35px;
+    }
+    .element-2  img {
+        width: 150px;
+        height: auto;
     }
 
     .menu-icon {
@@ -421,7 +468,17 @@ figure img {
         width: 30px;
         height: 30px;
     }
+    .profile {
+        width: 50%;
+        margin-right: 20px;
+        padding: 5px;
+    }
+    .profile p {
+        font-size: 15px;
+        padding: 2px;
+    }
 
+    /*Hero Section*/
     .container {
         padding: 0px;
         width: 100%;
@@ -444,7 +501,8 @@ figure img {
     }
     
     figure img {
-        width:auto;
+        width:100%;
+        margin: 30px 0px;
     }
 
     .biji-kopi-1 {
@@ -478,20 +536,57 @@ figure img {
         width: 55px;
         rotate: 0deg;
     }
-
+    /*Info*/
+    .container-info {
+        padding: 30px 30px;
+    }
     .container-info > div {
-        flex-direction: row;
+        flex-direction: column;
+        gap: 30px 20px;
+        padding: 0px 20px;
+    }
+
+    .container-info img {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+    }
+        
+
+    .container-info article {
+        width: auto;
+        flex-direction: column;
         gap: 20px;
     }
 
-    .container-info article {
-        flex-direction: column;
-        gap: 20px;
-    } 
-
     .container-info article h1 {
         font-size: 25px;
-        padding: 50px 140px 30px 140px;
+    }
+
+    /*Product*/
+    .container-product {
+        padding: 30px 30px;
+    }
+
+    .teks-info p {
+        width: auto;
+    }
+
+    .product {
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: auto;
+    }
+
+    .card-product figure {
+        padding: 0px 20px;
+    }
+
+    .card-product figure img {
+        width: 140px;
+        margin: 0px;
     }
 
     
@@ -508,7 +603,6 @@ figure img {
     }
 
     nav {
-        justify-content: center;
         padding: 12px 12px;
         height: 30px;
         align-items: center;
@@ -526,6 +620,52 @@ figure img {
 
     a img {
         width: 120px;
+    }
+
+    nav > .element-1 {
+        width: 100%;
+    }
+    nav > .element-2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    nav > .element-3 {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .profile {
+        padding: 0px;
+        font-size: 10px;
+        gap: 3px;
+        border: 1px solid var(--warna-utama);
+        padding: 4px;
+        align-items: center   ;
+        justify-content: center     ;
+    }
+    .profile img {
+        width: 18px;
+    }
+
+    .element-2 img {
+        width: 100px;
+    }
+
+    .element-1 ion-icon {
+        width: 25px;
+        height: 25px;
+        margin-left: 15px;
+    }
+
+    .element-1 {
+        display: block;
+        visibility: visible;
+    }
+
+    .element-1 {
+        visibility: visible;
     }
 
     .nav-list{
@@ -639,7 +779,6 @@ figure img {
         justify-content: start;
         align-items: center;
         text-align: center;
-        border: 1px black solid;
         width: 100%;
     }
 
@@ -651,10 +790,37 @@ figure img {
         flex-direction: column;
     }
 
-  }
+    /*Product*/
+    .container-product {
+        padding: 10px;
+    }
+    .card-product figure {
+        padding: 0px;
+        height: 200px;
+    }
+    .card-product figure img {
+        width: 110px;
+    }
+    .card-product > p {
+        font-size: 16px;
+    }
+    .card-product span p {
+        font-size: 12px;
+    }
+    .card-product h4 {
+        font-size: 15px;
+    }
+    .product {
+        padding: 20px 0px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        width: auto;
+    }
+
+}
 
 
-              
 .bounce {
     animation-name: bounce;
     animation-duration: 3s;
