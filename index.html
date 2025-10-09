@@ -14,21 +14,31 @@
 <body>
     <nav>
         <div class="element-1">
-            <ion-icon name="reorder-two"></ion-icon>
+            <ion-icon id="menu-bar-open" name="chevron-forward-outline"></ion-icon>
         </div>
         <div class="element-2">
             <a href=""><img src="img/logo.png" alt=""></a>
         </div>
         <ul class="nav-list">
-            <li class="transDown" ><a href="">Home</a></li>
-            <li class="transDown" ><a href="">Menu</a></li>
-            <li class="transDown" ><a href="">About</a></li>
-            <li class="transDown" ><a href="">Contact</a></li>
+            <div><ion-icon id="menu-bar-close" name="chevron-back-outline"></ion-icon></div>
+            <!--<div class="member">
+                <img src="img/personal.jpg" alt="">
+                <span>
+                    <h3>Muhamaf Faidil Aziz</h3>
+                    <p>Member</p>
+                </span>
+            </div>-->
+            <div>
+                <a class="transDown"><ion-icon name="home-outline"></ion-icon> Home</a>
+                <a class="transDown"><ion-icon name="cafe-outline"></ion-icon> Menu</a>
+                <a class="transDown"><ion-icon name="book-outline"></ion-icon> About</a>
+                <a class="transDown"><ion-icon name="megaphone-outline"></ion-icon> Contact</a>
+            </div>
         </ul>
         <di class="element-3">
             <div class="profile">
-            <img src="img/personal.jpg" alt="">
-            <p>John Doe</p>
+                <img src="img/personal.jpg" alt="">
+                <p>John Doe</p>
             </div>
         </di>
     </nav>
@@ -71,7 +81,7 @@
     <section class="container-product">
         <div class="container-search">
             <div class="search-bar">
-                <h1>Pilih Selera kopi Mu</h1>
+                <h1>Coffee</h1>
                 <input type="text" placeholder="Cari kopi favoritmu..."> 
             </div>
             <div class="product">
@@ -296,6 +306,16 @@
     <footer class="container-product">
         <a href=""><img src="img/logo.png" alt=""></a>
     </footer>
+
+    <!--Modals-->
+    <section class="container-modals">
+        <div class="modals">
+            <h1>Detail</h1>
+        </div>
+    </section>
+
+
+    <script src="js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
