@@ -18,15 +18,32 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;        
-    padding: 0px 140px;
     height: 100px;
-    width: auto;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 99;
 }
 
 
 .element-1 {
     display: none;
     visibility: hidden;
+}
+
+.element-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.element-3 ion-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
 }
 
 .profile {
@@ -99,7 +116,7 @@ a img {
 
 /*Main Section*/
 .container {
-    padding: 50px 140px 30px 140px;
+    padding: 170px 140px 30px 140px;
     position: relative;
     max-width: 1440px;
     margin: 0px auto;
@@ -373,7 +390,7 @@ figure img {
 
 /*Modals*/
 .container-modals {
-    display: block;
+    display: none;
     visibility: hidden;
     position: fixed;
     top: 0px;
@@ -383,18 +400,36 @@ figure img {
     width: 100%;
     height: 100%;
     background-color: rgb(0, 0, 0, 0.0);
+    z-index: 100;
 }
 .modals {
     background-color: white;
     width: 500px;
-    height: 500px;
+    height: auto;
     opacity: 1;
-    border-radius: 30px;
+    border-radius: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
-    transform: translateY(800px);
+    transform: translateY(380px);
     transition: transform 0.5s ease;
+    padding: 20px;
+    border: 1px solid gray;
+}
+.modals .modals-close-button {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+.modals div > ion-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.modals > h3 {
+    margin-bottom:20px ;
 }
 
 .container-modals.active {
@@ -412,6 +447,111 @@ figure img {
 
 .modals.active {
     transform: translateY(0px);
+}
+
+.detail-order {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.detail-order > p {
+    margin-bottom: 5px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.items {
+    display: flex;
+    gap: 10px;
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.modals > h4 {
+    margin-bottom: 10px;
+    float: left;
+}
+
+.items img {
+    background-color: var(--warna-latar);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.items div {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.items span {
+    margin-top: 35px;
+    color: rgb(0, 255, 0);
+}
+
+.figure-items {
+    width: 30%;
+}
+
+
+.items img {
+    width: 70px;
+}
+
+.modals-button {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.modals-button > button:nth-child(1) {
+    width: 100%;
+    border-radius: 50px;
+    padding: 15px 20px;
+    font-size: 15px;
+    border: 1px solid var(--warna-utama);
+    color: var(--warna-utama);
+    background-color: white;
+    cursor: pointer;
+}
+.modals-button > button:nth-child(2) {
+    width: 100%;
+    border-radius: 50px;
+    padding: 15px 20px;
+    font-size: 15px;
+    border: none;
+    color: white;
+    background-color: var(--warna-utama);
+    cursor: pointer;
+}
+
+.type-order {
+    display: flex;
+    gap: 5px;
+}
+
+.type-order > *  {
+    padding: 10px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: gray;
+}
+
+.adress input {
+    width:100%;
+    padding: 15px 0px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 12px;
 }
 
 
@@ -432,7 +572,7 @@ figure img {
         gap: 20px;
     }
     .container {
-        padding: 0px 50px;
+        padding: 160px 60px 0px;
     }
 
     .hero {
@@ -601,7 +741,7 @@ figure img {
 
     /*Hero Section*/
     .container {
-        padding: 0px;
+        padding: 100px 0px 00px 0px;
         width: 100%;
     }
 
@@ -844,14 +984,14 @@ figure img {
     .element-1 {
         visibility: visible;
     }
-
+    /*Hero Section*/
     .container {
         padding: 0px;
         width: 100%;
     }
 
     .hero {
-        padding: 70px 0px;
+        padding: 100px 0px 60px 0px;
         gap: 20px;
         width: 100%;
     }
@@ -881,7 +1021,7 @@ figure img {
 
     .biji-kopi-1 {
         position: absolute;
-        top: 30px;
+        top: 60px;
         left: 100px;
         width: 30px;
         rotate: 310deg;
@@ -998,6 +1138,30 @@ figure img {
         gap: 10px;
         width: auto;
     }
+
+    /*Modals*/
+    .container-modals.active {
+        display: block;
+        visibility: visible;
+        position: fixed;
+        top: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.5);
+    }
+    .modals {
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .modals-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
 
 }
 

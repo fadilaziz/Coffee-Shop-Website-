@@ -14,10 +14,17 @@ menuBarClose.addEventListener('click', function() {
 const modalsbg = document.querySelector('.container-modals');
 const modals = document.querySelector('.modals');
 const orderMenu = document.querySelector('.buy-button1')
-console.log(modalsbg,modals,orderMenu)
+const closeModals = document.querySelector('.close-modals')
+console.log(closeModals)
 
 orderMenu.addEventListener('click', function(){
     modalsbg.classList.add('active');
     modals.classList.add('active');
+    
+})
+
+closeModals.addEventListener('click', function() {
+    modals.classList.remove('active');
+    modalsbg.classList.remove('active');
     
 })
