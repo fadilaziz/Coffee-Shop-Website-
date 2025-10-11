@@ -24,8 +24,8 @@ This website brings the warm and cozy atmosphere of a real coffee shop to the we
 ---
 
 ## 📸 Preview
-![Coffee Shop Preview](preview.png)  
-*(Replace with your actual screenshot file name or image URL)*  
+![Coffee Shop Preview](https://fadilaziz.github.io/Coffee-Shop-Website-/)  
+
 
 ---
 
