@@ -20,11 +20,13 @@ console.log(closeModals)
 orderMenu.addEventListener('click', function(){
     modalsbg.classList.add('active');
     modals.classList.add('active');
+    document.body.style.overflow = 'hidden';
     
 })
 
 closeModals.addEventListener('click', function() {
     modals.classList.remove('active');
     modalsbg.classList.remove('active');
+    document.body.style.overflow = 'auto';
     
 })
