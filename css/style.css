@@ -414,7 +414,7 @@ figure img {
     align-items: center;
     transform: translateY(380px);
     transition: transform 0.5s ease;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid gray;
 }
 .modals .modals-close-button {
@@ -536,15 +536,44 @@ figure img {
     gap: 5px;
 }
 
-.type-order > *  {
-    padding: 10px 5px;
-    width: 100%;
+.type-order form {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid gray;
+    width: 100%;
     border-radius: 10px;
-    color: gray;
+    gap: 10px;
+}
+
+.type-order form > *  {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    border: 1px solid gray;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.type-order input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+
+.custom-radio:has(input:checked) {
+    border: 2px solid var(--warna-utama);
+    color: white;
+    background-color: var(--warna-utama);
+}
+
+.custom-radio ion-icon {
+    width: 20px;
+    height: 20px;
 }
 
 .adress input {

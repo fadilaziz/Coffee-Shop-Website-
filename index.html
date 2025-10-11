@@ -307,9 +307,6 @@
     <!--Modals-->
     <section class="container-modals">
         <div class="modals">
-            <div class="modals-close-button">
-                <ion-icon class="close-modals" name="close-outline"></ion-icon>
-            </div>
             <h3>Detail Pesanan</h3>
             <div class="detail-order">
                 <p>Pesanan saya</p>
@@ -323,12 +320,18 @@
                 </div>
                 <p>Tipe Pesanan</p>
                 <div class="type-order">
-                    <div class="type-1">
-                        <p>Pengantaran</p>
-                    </div>
-                    <div class="type-2">
-                        <p>Penjemputan</p>
-                    </div>
+                    <form action="">
+                        <label class="custom-radio radio-chacked" for="type-pesanan-1">
+                            <input type="radio" name="type-pesanan" id="type-pesanan-1" value="pengantaran">
+                            <ion-icon name="rocket-outline"></ion-icon>
+                            <span>Pengantaran</span>
+                        </label>
+                        <label class="custom-radio radio-chacked" for="type-pesanan-2">
+                            <input type="radio" name="type-pesanan" id="type-pesanan-2" value="penjemputan">
+                            <ion-icon name="rocket-outline"></ion-icon>
+                            <span>Penjemputan</span>
+                        </label>
+                    </form>
                 </div>
                 <p>Alamat Pesanan</p>
                 <div class="adress">
@@ -338,7 +341,7 @@
                 </div>
             </div>
             <div class="modals-button">
-                <button>Kembali</button>
+                <button class="close-modals">Kembali</button>
                 <button>Konfirmasi Pesanan</button>
             </div>
         </div>
