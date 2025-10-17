@@ -595,6 +595,64 @@ nav {
     font-size: 15px;
 }
 /*Product Section*/
+/*footer*/
+.footer-container {
+    padding: 30px 100px 30px 100px;
+    max-width: 2000px;
+    margin: auto;
+}
+.footer-element {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-element img {
+    width: 100px;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.footer-list a {
+    font-size: large;
+    color: gray;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.footer-list a:hover {
+    color: black;
+}
+.footer-list a ion-icon {
+    display: none;
+    visibility: hidden;
+}
+
+.media-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.media-social ion-icon {
+    width: 25px;
+    height: 25px;
+    color: var(--warna-utama);
+}
+.container-product hr {
+    margin-top: 20px;
+}
+.licance {
+    margin-top: 20px;
+    text-align: center;
+    color: gray;
+}
+/*footer*/
 
 /*Laptop L*/
 @media (max-width:1440px) {
@@ -841,6 +899,11 @@ nav {
         border-radius: 50px;
     }
 /*Product Section*/
+.footer-container {
+    padding: 30px 50px 30px 50px;
+    max-width: 2000px;
+    margin: auto;
+}
 }
 /*Tablet*/
 @media (max-width:768px) {
@@ -1046,6 +1109,11 @@ nav {
         width: 95%;
     }
     /*Product-Container*/
+    .footer-container {
+    padding: 30px 20px 30px 20px;
+    max-width: 2000px;
+    margin: auto;
+    }
 }
 /*Phone L*/
 @media (max-width:425px) {
@@ -1313,6 +1381,34 @@ nav {
         font-size: 13px;
     }
     /*Product-Container*/
+    /*footer*/
+    .footer-container {
+        padding: 30px 10px 30px 10px;
+        max-width: 2000px;
+        margin: auto;
+    }
+    .footer-element {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-element img {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+    .footer-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .footer-list a {
+        display: flex;
+        justify-content: start;
+    }
+    .licance {
+        font-size: 12px;
+    }
+
+    /*footer*/
 }
 /*Vibe Container*/
 /*Hover Animation*/
