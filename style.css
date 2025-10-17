@@ -1286,7 +1286,19 @@ nav {
         padding: 0px;
     }
     .product {
-        width: 92%;
+        width: 95%;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px; /* 6 kolom sama lebar */
+        padding: 10px;
+    }
+    .product-items {
+        padding: 10px;
+    }
+    .product-items img{
+        width: 70px;
+    }
+    .price-type {
+        gap: 5px;
     }
     /*Product-Container*/
 }
