@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Warna tema browser di Android -->
+    <meta name="theme-color" content="#f8e9c0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <!--Font inter-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +19,7 @@
 </head>
 <body>
     <!--Navbar-->
-    <nav>
+    <nav class="navbar">
         <div class="element-1">
             <div class="acount">
                     <img src="img/personal.jpg" alt="photo profil">
@@ -47,17 +53,45 @@
         </div>
         <div class="element-3">
             <ul>
-                <a href="#Home">Home</a>
-                <a href="#Home">Vibes</a>
-                <a href="#Home">Menu</a>
+                <a class="float-down" href="#Home">Home</a>
+                <a class="float-down" href="#Home">Vibes</a>
+                <a class="float-down" href="#Home">Menu</a>
                 <ion-icon name="notifications-outline"></ion-icon>
             </ul>
         </div>
     </nav>
     <!--Hero Section-->
     <section class="hero-container">
-        <div>
-
+        <div class="hero-section">
+            <h1>Refresh Your Day With a Cup of Coffee</h1>
+            <p>Enjoy every sip and live your life with peace of mind.</p>
+            <div class="hero-button">
+                <button>Order Now</button>
+            </div>
+            <img src="img/Coffee Image.png" alt="Coffee">
+        </div>
+    </section>
+    <!--Catalog-->
+    <section class="catalog-container">
+        <div class="catalog-section">
+            <div class="matcha-banner float">
+                <img src="img/matcha-banner.png" alt="Iced Matcha Latte">
+                <div>
+                    <h1>Matcha</h1>
+                    <p>20% Off This Week!</p>
+                    <p>Start from <span>Rp.16.000.00</span></p>
+                    <button class="banner-button float">Order Now</button>
+                </div>
+            </div>
+            <div class="matchiato-banner float">
+                <img src="img/matchiato-banner.png" alt="Iced Matcha Latte">
+                <div>
+                    <h1>Matchiatto</h1>
+                    <p>20% Off This Week!</p>
+                    <p>Start from <span>Rp.16.000.00</span></p>
+                    <button class="banner-button float">Order Now</button>
+                </div>
+            </div>
         </div>
     </section>
     <script src="script.js"></script>

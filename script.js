@@ -1,3 +1,15 @@
+//Scroll Record
+const nav = document.querySelector('.navbar');
+console.log(nav)
+window.addEventListener('scroll', ()=> {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > 50) {
+        nav.style.borderBottom = '1px solid gray';
+    } else {
+        nav.style.borderBottom = '0px solid gray';
+    }
+});
+
 //Sidebar
 const openSideButton = document.querySelector('.acount');
 const sideBar = document.querySelector('.side-bar');
