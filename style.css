@@ -1322,7 +1322,12 @@ nav {
         margin: auto;
     }
     .product-section {
-        padding: 0px 0px;
+        width: fit-content;
+        gap: 0px;
+        padding: 10px 0px;
+        width: 100%;
+        border: 0px;
+        background-color: var(--var-accets);
     }
     .product-search form input  {
         width: 84%;
@@ -1331,11 +1336,10 @@ nav {
         border: 1px solid gray; 
         font-size: 16px;
         border-radius: 50px;
-        display: none;
-        visibility: hidden;
     }
     .product-header h1 {
         font-size: 24px;
+        padding-top: 0px;
     }
     .product-type button {
         padding: 10px 20px;
@@ -1347,16 +1351,16 @@ nav {
         gap: 15px;
     }
     .product-type {
-        width: 100%;
         overflow-x: auto;
         scrollbar-width: none;
+        width:100%;
     }
     .product-type button {
-        padding: 5px 15px;
+        padding: 3px 15px;
+        width: 100px;
     }
     .product-list {
-        padding: 10px;
-        padding: 0px;
+        padding: 5px;
     }
     .product {
         width: 95%;
