@@ -4,9 +4,9 @@ console.log(nav)
 window.addEventListener('scroll', ()=> {
     const scrollPosition = window.scrollY;
     if (scrollPosition > 50) {
-        nav.style.borderBottom = '1px solid gray';
+        nav.style.borderBottom = '1px solid rgb(202, 202, 202)';
     } else {
-        nav.style.borderBottom = '0px solid gray';
+        nav.style.borderBottom = '0px solid rgb(202, 202, 202)';
     }
 });
 
