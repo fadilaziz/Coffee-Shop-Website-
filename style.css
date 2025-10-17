@@ -1377,6 +1377,9 @@ nav {
     .price-type {
         gap: 5px;
     }
+    .price-type p:nth-child(1) {
+        font-size: 11px;
+    }
     .price-type p:nth-child(2) {
         font-size: 13px;
     }
