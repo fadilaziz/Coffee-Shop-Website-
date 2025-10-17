@@ -34,6 +34,7 @@ nav {
     display: flex;
     padding: 20px 100px;
     background-color: white;
+    z-index: 99;
 }
 
 .element-1 {
@@ -315,7 +316,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f5f5f5;
     padding: 30px 100px 30px 100px;
 
 }
@@ -326,9 +326,8 @@ nav {
     align-items: center;
     height: auto;
     margin: 0;
-    background-color: #f0f0f0;
     font-family: sans-serif;
-    gap: 20px;
+    gap: 30px;
 }
 .matcha-banner {
     position: relative; 
@@ -407,6 +406,58 @@ nav {
     cursor: pointer;
 }
 /*Catalog Section*/
+/*Vibe Container*/
+.vibe-container {
+    padding: 0px 100px;
+}
+.vibe-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--var-accets);
+    padding: 40px;
+    border-radius: 30px;
+}
+.vibe-text {
+    display: flex;
+    gap: 30px;
+}
+.vibe-text  h1 {
+    font-size: 60px;
+}
+.vibe-text  p {
+    margin-top: 23px;
+    font-size: 15px;
+    width: 600px;
+}
+.vibe-text button {
+    padding: 10px 20px;
+    background-color: var(--var-primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 20px;
+}
+.vibe-section h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.vibe-section p {
+    color: gray;
+    font-size: 20px;
+}
+.vibe-section img {
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 25px;
+}
+/*Vibe Container*/
+
 /*Laptop L*/
 @media (max-width:1440px) {
     /*Hero-section*/
@@ -436,6 +487,51 @@ nav {
         right: 20px;
     }
     /*Hero Catalog*/
+    /*Vibe Container*/
+    .vibe-container {
+        padding: 0px 100px;
+    }
+    .vibe-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--var-accets);
+        padding: 40px;
+        border-radius: 30px;
+    }
+    .vibe-text {
+        display: flex;
+        gap: 30px;
+    }
+    .vibe-text button {
+        padding: 10px 20px;
+        background-color: var(--var-primary);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        width: fit-content;
+        margin-top: 20px;
+    }
+    .vibe-section h1 {
+        font-size: 46px;
+        margin-bottom: 10px;
+    }
+    .vibe-section p {
+        margin-top: 10px;
+        color: gray;
+        font-size: 20px;
+        width: 500px;
+    }
+    .vibe-section img {
+        width: 100%;
+        margin-top: 30px;
+        border-radius: 25px;
+    }
+/*Vibe Container*/
 }
 /*Laptop*/
 @media (max-width:1024px) {
@@ -549,6 +645,50 @@ nav {
         padding: 10px 20px;
     }
     /*Catalog-Banner*/
+    /*Vibe Container*/
+    .vibe-container {
+        padding: 0px 50px;
+    }
+    .vibe-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--var-accets);
+        padding: 40px;
+        border-radius: 30px;
+    }
+    .vibe-text {
+        display: flex;
+        gap: 30px;
+    }
+    .vibe-text button {
+        padding: 10px 20px;
+        background-color: var(--var-primary);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        width: fit-content;
+        margin-top: 20px;
+    }
+    .vibe-section h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    .vibe-section p {
+        margin-top: 5px;
+        color: gray;
+        font-size: 16px;
+        width: 400px;
+    }
+    .vibe-section img {
+        width: 100%;
+        margin-top: 30px;
+        border-radius: 25px;
+    }
 }
 /*Tablet*/
 @media (max-width:768px) {
@@ -685,7 +825,53 @@ nav {
         margin-top: 20px;
     }
     /*Catalog-Banner*/
+    /*Vibe Container*/
+    .vibe-container {
+        padding: 0px 20px;
+    }
+    .vibe-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--var-accets);
+        padding: 30px;
+        border-radius: 30px;
+    }
+    .vibe-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .vibe-text button {
+        padding: 10px 20px;
+        background-color: var(--var-primary);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        width: fit-content;
+        margin-top: 20px;
+    }
+    .vibe-section h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+    .vibe-section p {
+        margin-top: 5px;
+        color: gray;
+        font-size: 20px;
+        width: 100%;
+    }
+    .vibe-section img {
+        width: 100%;
+        margin-top: 30px;
+        border-radius: 25px;
+    }
 }
+/*Vibe Container*/
 /*Phone L*/
 @media (max-width:425px) {
     /*Navbar*/
@@ -769,10 +955,11 @@ nav {
     /*Hero Section*/
     /*Catalog-Banner*/
     .catalog-container {
-        padding: 30px 20px 30px 20px;
+        padding: 20px 10px 20px 10px;
     }
     .catalog-section {
         flex-direction: column;
+        gap: 20px;
     }
     /*Matcha*/
     .matcha-banner {
@@ -837,7 +1024,57 @@ nav {
         font-size: 15px;
     }
     /*Catalog-Banner*/
+    /*Vibe Container*/
+    .vibe-container {
+        padding: 0px 10px;
+    }
+    .vibe-section {
+        background-image: url(img/place-grayscale.jpg);
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--var-accets);
+        padding: 30px;
+        border-radius: 30px;
+        background-size: cover;
+    }
+    .vibe-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .vibe-text button {
+        padding: 15px 20px;
+        width: 100%;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 30px;
+        border: 1px solid white ;
+        background-color: rgba(255, 255, 255, 0.315);
+    }
+    .vibe-section h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+        color: white;
+    }
+    .vibe-section p {
+        margin-top: 5px;
+        color: rgb(216, 216, 216);
+        font-size: 20px;
+        width: 100%;
+    }
+    .vibe-section img {
+        display: none;
+        visibility: hidden;
+    }
 }
+/*Vibe Container*/
 /*Hover Animation*/
 .float{
     transition: .5s, color .10s;
