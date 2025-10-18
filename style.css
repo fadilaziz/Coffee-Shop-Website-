@@ -3,6 +3,11 @@
     margin: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 /*Color*/
 :root {
     --var-bacground:#FFFFFF;
@@ -541,6 +546,8 @@ nav {
     padding: 15px;
     border-radius: 20px;
     width: 98%;
+    max-height: 850px;
+    overflow-y: auto;
 }
 .product-items {
     border: 0px solid gray;
@@ -552,6 +559,13 @@ nav {
     border-radius: 25px;
     background-color: white;
     padding: 15px;
+    transition: all 0.3s ease;
+}
+.product-items:hover {
+    border-radius: 25px;
+    background-color: white;
+    padding: 15px;
+    transform: translateY(-10px);
 }
 .product-items .img-bg {
     background-color: var(--var-accets);
@@ -560,9 +574,23 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 250px;
+    position: relative;
+}
+.promo {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.719);
+    border-radius: 50px;
+    z-index: 20;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: bold;
 }
 .product-items div img {
-    width: 130px;
+    width: 120px;
     padding: 12px 35px;
 }
 .product-items h1 {
@@ -593,11 +621,18 @@ nav {
     border: none;
     cursor: pointer;
     font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.product-button button:hover {
+    background-color: var(--var-primary);
+    color: white;
 }
 /*Product Section*/
 /*Iframe*/
 .maps {
     padding: 0px 100px;
+    max-width: 2000px;
+    margin: auto;
 }
 iframe {
     width: 100%;
@@ -906,12 +941,18 @@ iframe {
         font-size: 16px;
         border-radius: 50px;
     }
-/*Product Section*/
-.footer-container {
-    padding: 30px 50px 30px 50px;
-    max-width: 2000px;
-    margin: auto;
-}
+    /*Product Section*/
+    .footer-container {
+        padding: 30px 50px 30px 50px;
+        max-width: 2000px;
+        margin: auto;
+    }
+    /*Product Section*/
+    /*Maps*/
+    .maps {
+        padding: 0px 50px;
+    }
+    /*Maps*/
 }
 /*Tablet*/
 @media (max-width:768px) {
@@ -1117,11 +1158,18 @@ iframe {
         width: 95%;
     }
     /*Product-Container*/
+    /*foter*/
     .footer-container {
-    padding: 30px 20px 30px 20px;
+        padding: 30px 20px 30px 20px;
     max-width: 2000px;
     margin: auto;
     }
+    /*foter*/
+    /*Maps*/
+    .maps {
+        padding: 0px 20px;
+    }
+    /*Maps*/
 }
 /*Phone L*/
 @media (max-width:425px) {
@@ -1400,6 +1448,11 @@ iframe {
         font-size: 13px;
     }
     /*Product-Container*/
+    /*Maps*/
+    .maps {
+        padding: 0px 10px;
+    }
+    /*Maps*/
     /*footer*/
     .footer-container {
         padding: 30px 10px 30px 10px;
@@ -1430,7 +1483,6 @@ iframe {
     .licance {
         font-size: 12px;
     }
-
     /*footer*/
 }
 /*Vibe Container*/

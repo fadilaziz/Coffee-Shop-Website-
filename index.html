@@ -41,9 +41,9 @@
                     <ion-icon class="side-bar-close" name="close-circle-outline"></ion-icon>
                 </div>
                 <div class="side-bar-content">
-                    <a href="#"><button><ion-icon name="home-outline"></ion-icon> Home</button></a>
-                    <a href="#"><button><ion-icon name="cube-outline"></ion-icon> Vibes</button></a>
-                    <a href="#"><button><ion-icon name="grid-outline"></ion-icon></ion-icon> Menu</button></a>
+                    <a href="#Home"><button><ion-icon name="home-outline"></ion-icon> Home</button></a>
+                    <a href="#Vibes"><button><ion-icon name="cube-outline"></ion-icon> Vibes</button></a>
+                    <a href="#Menu"><button><ion-icon name="grid-outline"></ion-icon> Menu</button></a>
                 </div>
                 <div class="side-bar-logout">
                     <a href="#"><button><ion-icon name="log-out-outline"></ion-icon> Log-Out</button></a>
@@ -56,14 +56,15 @@
         <div class="element-3">
             <ul>
                 <a class="float-down" href="#Home">Home</a>
-                <a class="float-down" href="#Home">Vibes</a>
-                <a class="float-down" href="#Home">Menu</a>
+                <a class="float-down" href="#Vibes">Vibes</a>
+                <a class="float-down" href="#Menu">Menu</a>
+                <a class="float-down" href="#Location">Location</a>
                 <ion-icon name="notifications-outline"></ion-icon>
             </ul>
         </div>
     </nav>
     <!--Hero Section-->
-    <section class="hero-container">
+    <section class="hero-container" id="Home">
         <div class="hero-section">
             <h1>Refresh Your Day With a Cup of Coffee</h1>
             <p>Enjoy every sip and live your life with peace of mind.</p>
@@ -97,7 +98,7 @@
         </div>
     </section>
     <!---Vibe Section-->
-    <section class="vibe-container">
+    <section class="vibe-container" id="Vibes">
         <div class="vibe-section">
             <div class="vibe-text">
                 <h1>Find a Peaceful Atmosphere for Your Cup of Coffee</h1>
@@ -110,7 +111,7 @@
         </div>
     </section>
     <!--Product Section-->
-    <section class="product-container">
+    <section class="product-container" id="Menu">
         <div class="product-section">
             <div class="product-search">
                 <form action="">
@@ -121,7 +122,8 @@
                 <div class="product-header">
                     <h1>Coffee Menu</h1>
                     <div class="product-type">
-                        <button class="active">Coffee</button>
+                        <button class="active">All</button>
+                        <button>Coffee</button>
                         <button>Non-Coffee</button>
                         <button>Food</button>
                         <button>Desert</button>
@@ -131,9 +133,60 @@
                     <!--items 1-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
+                            <div class="promo">
+                                <p>20% Off</p>
+                            </div>
+                            <img src="img/matcha-banner.png" alt="">
                         </div>
                         <h1>Matcha</h1>
+                        <div class="price-type">
+                            <p>Non-Coffee</p>
+                            <p>Rp.16.000</p>
+                        </div>
+                        <div class="product-button">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <!--items 1-->
+                    <!--items 2-->
+                    <div class="product-items">
+                        <div class="img-bg">
+                            <div class="promo">
+                                <p>20% Off</p>
+                            </div>
+                            <img src="img/matchiato-banner.png" alt="">
+                        </div>
+                        <h1>Matchiatto</h1>
+                        <div class="price-type">
+                            <p>Coffee</p>
+                            <p>Rp.16.000</p>
+                        </div>
+                        <div class="product-button">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <!--items 2-->
+                    <!--items 3-->
+                    <div class="product-items">
+                        <div class="img-bg">
+                            <img src="img/cappuchino.png" alt="">
+                        </div>
+                        <h1>Cappuchino</h1>
+                        <div class="price-type">
+                            <p>Coffee</p>
+                            <p>Rp.20.000</p>
+                        </div>
+                        <div class="product-button">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <!--items 3-->
+                    <!--items 4-->
+                    <div class="product-items">
+                        <div class="img-bg">
+                            <img src="img/thaitea.png" alt="">
+                        </div>
+                        <h1>Thai Tea</h1>
                         <div class="price-type">
                             <p>Non-Coffee</p>
                             <p>Rp.20.000</p>
@@ -142,13 +195,94 @@
                             <button>Add to Cart</button>
                         </div>
                     </div>
-                    <!--items 1-->
+                    <!--items 4-->
+                    <!--items 5-->
+                    <div class="product-items">
+                        <div class="img-bg">
+                            <img src="img/kopsuren.png" alt="">
+                        </div>
+                        <h1>Kopsuren</h1>
+                        <div class="price-type">
+                            <p>Coffee</p>
+                            <p>Rp.20.000</p>
+                        </div>
+                        <div class="product-button">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <!--items 5-->
+                    <!--items 6-->
+                    <div class="product-items">
+                        <div class="img-bg">
+                            <img src="img/americano.png" alt="">
+                        </div>
+                        <h1>Americano</h1>
+                        <div class="price-type">
+                            <p>Coffee</p>
+                            <p>Rp.20.000</p>
+                        </div>
+                        <div class="product-button">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <!--items 6-->
                     <!--items 1-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
+                            <div class="promo">
+                                <p>20% Off</p>
+                            </div>
+                            <img src="img/matcha-banner.png" alt="">
                         </div>
                         <h1>Matcha</h1>
+                        <div class="price-type">
+                            <p>Non-Coffee</p>
+                            <p>Rp.16.000</p>
+                        </div>
+                        <div class="product-button">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <!--items 1-->
+                    <!--items 2-->
+                    <div class="product-items">
+                        <div class="img-bg">
+                            <div class="promo">
+                                <p>20% Off</p>
+                            </div>
+                            <img src="img/matchiato-banner.png" alt="">
+                        </div>
+                        <h1>Matchiatto</h1>
+                        <div class="price-type">
+                            <p>Coffee</p>
+                            <p>Rp.16.000</p>
+                        </div>
+                        <div class="product-button">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <!--items 2-->
+                    <!--items 3-->
+                    <div class="product-items">
+                        <div class="img-bg">
+                            <img src="img/cappuchino.png" alt="">
+                        </div>
+                        <h1>Cappuchino</h1>
+                        <div class="price-type">
+                            <p>Coffee</p>
+                            <p>Rp.20.000</p>
+                        </div>
+                        <div class="product-button">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <!--items 3-->
+                    <!--items 4-->
+                    <div class="product-items">
+                        <div class="img-bg">
+                            <img src="img/thaitea.png" alt="">
+                        </div>
+                        <h1>Thai Tea</h1>
                         <div class="price-type">
                             <p>Non-Coffee</p>
                             <p>Rp.20.000</p>
@@ -157,58 +291,94 @@
                             <button>Add to Cart</button>
                         </div>
                     </div>
-                    <!--items 1-->
+                    <!--items 4-->
+                    <!--items 5-->
+                    <div class="product-items">
+                        <div class="img-bg">
+                            <img src="img/kopsuren.png" alt="">
+                        </div>
+                        <h1>Kopsuren</h1>
+                        <div class="price-type">
+                            <p>Coffee</p>
+                            <p>Rp.20.000</p>
+                        </div>
+                        <div class="product-button">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <!--items 5-->
+                    <!--items 6-->
+                    <div class="product-items">
+                        <div class="img-bg">
+                            <img src="img/americano.png" alt="">
+                        </div>
+                        <h1>Americano</h1>
+                        <div class="price-type">
+                            <p>Coffee</p>
+                            <p>Rp.20.000</p>
+                        </div>
+                        <div class="product-button">
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <!--items 6-->
                     <!--items 1-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
+                            <div class="promo">
+                                <p>20% Off</p>
+                            </div>
+                            <img src="img/matcha-banner.png" alt="">
                         </div>
                         <h1>Matcha</h1>
                         <div class="price-type">
                             <p>Non-Coffee</p>
-                            <p>Rp.20.000</p>
+                            <p>Rp.16.000</p>
                         </div>
                         <div class="product-button">
                             <button>Add to Cart</button>
                         </div>
                     </div>
                     <!--items 1-->
-                    <!--items 1-->
+                    <!--items 2-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
+                            <div class="promo">
+                                <p>20% Off</p>
+                            </div>
+                            <img src="img/matchiato-banner.png" alt="">
                         </div>
-                        <h1>Matcha</h1>
+                        <h1>Matchiatto</h1>
                         <div class="price-type">
-                            <p>Non-Coffee</p>
-                            <p>Rp.20.000</p>
+                            <p>Coffee</p>
+                            <p>Rp.16.000</p>
                         </div>
                         <div class="product-button">
                             <button>Add to Cart</button>
                         </div>
                     </div>
-                    <!--items 1-->
-                    <!--items 1-->
+                    <!--items 2-->
+                    <!--items 3-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
+                            <img src="img/cappuchino.png" alt="">
                         </div>
-                        <h1>Matcha</h1>
+                        <h1>Cappuchino</h1>
                         <div class="price-type">
-                            <p>Non-Coffee</p>
+                            <p>Coffee</p>
                             <p>Rp.20.000</p>
                         </div>
                         <div class="product-button">
                             <button>Add to Cart</button>
                         </div>
                     </div>
-                    <!--items 1-->
-                    <!--items 1-->
+                    <!--items 3-->
+                    <!--items 4-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
+                            <img src="img/thaitea.png" alt="">
                         </div>
-                        <h1>Matcha</h1>
+                        <h1>Thai Tea</h1>
                         <div class="price-type">
                             <p>Non-Coffee</p>
                             <p>Rp.20.000</p>
@@ -217,103 +387,43 @@
                             <button>Add to Cart</button>
                         </div>
                     </div>
-                    <!--items 1-->
-                    <!--items 1-->
+                    <!--items 4-->
+                    <!--items 5-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
+                            <img src="img/kopsuren.png" alt="">
                         </div>
-                        <h1>Matcha</h1>
+                        <h1>Kopsuren</h1>
                         <div class="price-type">
-                            <p>Non-Coffee</p>
+                            <p>Coffee</p>
                             <p>Rp.20.000</p>
                         </div>
                         <div class="product-button">
                             <button>Add to Cart</button>
                         </div>
                     </div>
-                    <!--items 1-->
-                    <!--items 1-->
+                    <!--items 5-->
+                    <!--items 6-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
+                            <img src="img/americano.png" alt="">
                         </div>
-                        <h1>Matcha</h1>
+                        <h1>Americano</h1>
                         <div class="price-type">
-                            <p>Non-Coffee</p>
+                            <p>Coffee</p>
                             <p>Rp.20.000</p>
                         </div>
                         <div class="product-button">
                             <button>Add to Cart</button>
                         </div>
                     </div>
-                    <!--items 1-->
-                    <!--items 1-->
-                    <div class="product-items">
-                        <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
-                        </div>
-                        <h1>Matcha</h1>
-                        <div class="price-type">
-                            <p>Non-Coffee</p>
-                            <p>Rp.20.000</p>
-                        </div>
-                        <div class="product-button">
-                            <button>Add to Cart</button>
-                        </div>
-                    </div>
-                    <!--items 1-->
-                    <!--items 1-->
-                    <div class="product-items">
-                        <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
-                        </div>
-                        <h1>Matcha</h1>
-                        <div class="price-type">
-                            <p>Non-Coffee</p>
-                            <p>Rp.20.000</p>
-                        </div>
-                        <div class="product-button">
-                            <button>Add to Cart</button>
-                        </div>
-                    </div>
-                    <!--items 1-->
-                    <!--items 1-->
-                    <div class="product-items">
-                        <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
-                        </div>
-                        <h1>Matcha</h1>
-                        <div class="price-type">
-                            <p>Non-Coffee</p>
-                            <p>Rp.20.000</p>
-                        </div>
-                        <div class="product-button">
-                            <button>Add to Cart</button>
-                        </div>
-                    </div>
-                    <!--items 1-->
-                    <!--items 1-->
-                    <div class="product-items">
-                        <div class="img-bg">
-                            <img src="img/matcha.png" alt="">
-                        </div>
-                        <h1>Matcha</h1>
-                        <div class="price-type">
-                            <p>Non-Coffee</p>
-                            <p>Rp.20.000</p>
-                        </div>
-                        <div class="product-button">
-                            <button>Add to Cart</button>
-                        </div>
-                    </div>
-                    <!--items 1-->
+                    <!--items 6-->
                 </div>
             </div>
         </div>
     </section>
     <!--Maps-->
-    <section class="maps">
+    <section class="maps" id="Location">
         <div>
             <iframe     
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.480090917404!2d105.26835917503912!3d-5.377310254314387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40dbae8bcbf0f3%3A0x7dfb2edb507f8261!2sSukarame%2C%20Bandar%20Lampung!5e0!3m2!1sid!2sid!4v1739836287510!5m2!1sid!2sid"
