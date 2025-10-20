@@ -140,7 +140,7 @@ nav {
 }
 .side-bar.active {
     width:fit-content;
-    height: 270px;
+    height: 300px;
     display: block;
     visibility: visible;
     display: flex;
@@ -266,11 +266,41 @@ nav {
 /*Acount in sidebar*/
 /*Navbar*/
 
+/*coffee image*/
+.coffee-image-1 {
+    position: absolute;
+    top: 100px;
+    left: 550px;
+    width: 70px;
+    rotate: 310deg;
+}
+.coffee-image-2 {
+    position: absolute;
+    top: 500px;
+    left: 250px;
+    width: 100px;
+}
+.coffee-image-3 {
+    position: absolute;
+    right: 250px;
+    width: 90px;
+    top: 300px;
+    rotate: 30deg;
+}
+.coffee-image-4 {
+    position: absolute;
+    right: 400px;
+    width: 60px;
+    top: 580px;
+    rotate: 300deg;
+}
+
 /*Hero Section*/
 .hero-container {
     padding: 170px 100px 0px 100px;
     max-width: 2000px;
     margin: auto;
+    position: relative;
 }
 .hero-section {
     display: flex;
@@ -488,7 +518,7 @@ nav {
     width: 100%;
 }
 .product-search form input  {
-    width: 60%;
+    width: 96%;
     padding: 15px 30px;
     border: 1px solid gray; 
     font-size: 16px;
@@ -546,7 +576,7 @@ nav {
     padding: 15px;
     border-radius: 20px;
     width: 98%;
-    max-height: 850px;
+    max-height: 600px;
     overflow-y: auto;
 }
 .product-items {
@@ -661,12 +691,12 @@ iframe {
 }
 .footer-list a {
     font-size: large;
-    color: gray;
     gap: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    color: var(--var-text);
 }
 .footer-list a:hover {
     color: black;
@@ -682,6 +712,10 @@ iframe {
     align-items: center;
     gap: 15px;
 }
+.media-social a {
+    color: var(--var-text);
+    cursor: pointer;
+}
 .media-social ion-icon {
     width: 25px;
     height: 25px;
@@ -695,6 +729,10 @@ iframe {
     text-align: center;
     color: gray;
 }
+.licance span {
+    font-weight: bold;
+    color: var(--var-text);
+}
 /*footer*/
 
 /*Laptop L*/
@@ -704,6 +742,24 @@ iframe {
         margin: 0px 100px;
     }
     /*Hero-section*/
+    /*coffee*/
+    .coffee-image-1 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-2 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-3 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-4 {
+        display: none;
+        visibility: hidden;
+    }
+    /*coffee*/
     /*Hero Catalog*/
     .matcha-banner div {
         left: 40px;
@@ -804,6 +860,24 @@ iframe {
         gap: 40px;
     }
     /*Navbar*/
+    /*coffee*/
+    .coffee-image-1 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-2 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-3 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-4 {
+        display: none;
+        visibility: hidden;
+    }
+    /*coffee*/
     /*Hero Serion*/
     .hero-container {
         padding: 150px 50px 0px 50px;
@@ -1025,6 +1099,24 @@ iframe {
         font-size: 55px;
     }
     /*Hero Section*/
+    /*coffee*/
+    .coffee-image-1 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-2 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-3 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-4 {
+        display: none;
+        visibility: hidden;
+    }
+    /*coffee*/
     /*Catalog-Banner*/
     .catalog-container {
         padding: 30px 20px 30px 20px;
@@ -1147,15 +1239,44 @@ iframe {
         font-size: 16px;
         border-radius: 50px;
     }
+    .product-header {
+        padding: 0px 0px;
+    }
     .product-header h1 {
-        font-size: 24px;
+        font-size: 20px;
     }
     .product-type button {
         padding: 10px 20px;
         font-size: 14px;
     }
     .product {
-        width: 95%;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        padding: 0px;
+    }
+    .product-items .img-bg {
+        height: 200px;
+    }
+    .product-items div img {
+        width: 100px;
+        padding: 12px 25px;
+    }
+    .product-items h1 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .price-type {
+        font-size: 14px;
+        gap: 5px;
+    }
+    .price-type button {
+        font-size: 10px;
+    }
+    .price-type p:nth-child(2) {
+        font-size: 15px;
+    }
+    .product-button button {
+        font-size: 14px;
     }
     /*Product-Container*/
     /*foter*/
@@ -1227,6 +1348,24 @@ iframe {
         top: 10px;
     }
     /*Navbar*/
+    /*coffee*/
+    .coffee-image-1 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-2 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-3 {
+        display: none;
+        visibility: hidden;
+    }
+    .coffee-image-4 {
+        display: none;
+        visibility: hidden;
+    }
+    /*coffee*/
     /*Hero Section*/
     .hero-container {
         padding: 100px 20px 0px 20px;
@@ -1407,6 +1546,7 @@ iframe {
         flex-direction: column;
         align-items: start;
         gap: 15px;
+        padding: 15px 15px 0px 15px;
     }
     .product-type {
         overflow-x: auto;
@@ -1414,7 +1554,12 @@ iframe {
         width:100%;
     }
     .product-type button {
-        padding: 3px 30px;
+        padding: 3px 20px;
+        font-size: 12px;
+    }
+    .product-type button p {
+        width: 80px;
+        font-size: 12px;
     }
     .product-type button:nth-child(2) {
         width: 200px;
@@ -1427,12 +1572,17 @@ iframe {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 10px; /* 6 kolom sama lebar */
         padding: 10px;
+        max- height: 800px;
     }
     .product-items h1 {
         font-size: 20px;
         margin-top: 5px;
     }
     .product-items {
+        padding: 10px;
+    }
+    .product-items:hover {
+        transform: translateY(0px);
         padding: 10px;
     }
     .product-items div img{
@@ -1455,7 +1605,7 @@ iframe {
     /*Maps*/
     /*footer*/
     .footer-container {
-        padding: 30px 10px 30px 10px;
+        padding: 30px 30px 30px 30px;
         max-width: 2000px;
         margin: auto;
     }
@@ -1472,13 +1622,18 @@ iframe {
         flex-direction: column;
         justify-content: start;
         align-items: start;
-        margin-left: 30px;
+        margin-left: 10px;
         gap: 20px;
     }
     .footer-list a {
         display: flex;
         justify-content: start;
         font-size: 15px;
+    }
+    .media-social {
+        justify-content: start;
+        margin-left: 10px;
+        padding: 20px 0px;
     }
     .licance {
         font-size: 12px;
@@ -1509,3 +1664,17 @@ iframe {
     color: black;
 }
 /*Hover Animation*/
+/*Bounce Animation*/
+.bounce {
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+}
+
+/*Bounce Animation*/
