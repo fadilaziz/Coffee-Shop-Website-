@@ -37,3 +37,4 @@ sideBarClose.addEventListener('click', ()=> {
     logOut.classList.remove('active');
 })
 
+

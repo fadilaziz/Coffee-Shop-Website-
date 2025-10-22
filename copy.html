@@ -1,122 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Warna tema browser di Android -->
-    <meta name="theme-color" content="#f8e9c0">
-    <!--Favicon-->
-    <link rel="icon" type="image/x-icon" href="img/favicon.png">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!--Product Section-->
+    <style>
+        .product {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 6 kolom sama lebar */
+        gap: 20px; /* Jarak antar produk */
+        padding: 15px;
+        border-radius: 20px;
+        width: 98%;
+        max-height: 600px;
+        overflow-y: auto;
+    }
 
-    <!--Font inter-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiny5&display=swap" rel="stylesheet">
-    <!--Style CSS-->
-    <link rel="stylesheet" href="style.css">
-    <title>Coffee Shop</title>
-</head>
-<body>
-    <!--Navbar-->
-    <nav class="navbar">
-        <div class="element-1">
-            <div class="acount">
-                    <img src="img/personal.webp" alt="photo profil">
-                    <div class="text-acount">
-                        <span>Muhamad Faidil Aziz</span>
-                        <p>Member</p>
-                    </div>
-                    <ion-icon name="ellipsis-vertical"></ion-icon>
-                </div>
-            <div class="side-bar">
-                <div class="acount2">
-                    <img src="img/personal.webp" alt="photo profil">
-                    <div class="text-acount2">
-                        <span>Muhamad Faidil Aziz</span>
-                        <p>Member</p>
-                    </div>
-                    <ion-icon class="side-bar-close" name="close-circle-outline"></ion-icon>
-                </div>
-                <div class="side-bar-content">
-                    <a href="#Home"><button><ion-icon name="home-outline"></ion-icon> Home</button></a>
-                    <a href="#Vibes"><button><ion-icon name="cube-outline"></ion-icon> Vibes</button></a>
-                    <a href="#Menu"><button><ion-icon name="grid-outline"></ion-icon> Menu</button></a>
-                    <a href="#Location"><button><ion-icon name="compass-outline"></ion-icon> Location</button></a>
-                </div>
-                <div class="side-bar-logout">
-                    <a href="#"><button><ion-icon name="log-out-outline"></ion-icon> Log-Out</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="element-2">
-            <a href=""><img src="img/logo.webp" alt=""></a>
-        </div>
-        <div class="element-3">
-            <ul>
-                <a class="float-down" href="#Home">Home</a>
-                <a class="float-down" href="#Vibes">Vibes</a>
-                <a class="float-down" href="#Menu">Menu</a>
-                <a class="float-down" href="#Location">Location</a>
-                <ion-icon name="notifications-outline"></ion-icon>
-            </ul>
-        </div>
-    </nav>
-    <!--Hero Section-->
-    <section class="hero-container" id="Home">
-        <img class="coffee-image-1 bounce" src="img/biji-kopi.webp" alt="coffee-image">
-        <img class="coffee-image-2 bounce" src="img/biji-kopi.webp" alt="coffee-image">
-        <img class="coffee-image-3 bounce" src="img/biji-kopi.webp" alt="coffee-image">
-        <img class="coffee-image-4 bounce" src="img/biji-kopi.webp" alt="coffee-image">
-        <div class="hero-section">
-            <h1>Refresh Your Day With a Cup of Coffee</h1>
-            <p>Enjoy every sip and live your life with peace of mind.</p>
-            <div class="hero-button">
-                <a href="#Menu"><button>Order Now</button></a>
-            </div>
-            <img src="img/Coffee Image.webp" alt="Coffee">
-        </div>
-    </section>
-    <!--Catalog-->
-    <section class="catalog-container">
-        <div class="catalog-section">
-            <div class="matcha-banner float">
-                <img src="img/matcha-banner.webp" alt="Iced Matcha Latte">
-                <div>
-                    <h1>Matcha</h1>
-                    <p>20% Off This Week!</p>
-                    <p>Start from <span>Rp.16.000.00</span></p>
-                    <a href="#Menu"><button class="banner-button float">Order Now</button></a>
-                </div>
-            </div>
-            <div class="matchiato-banner float">
-                <img src="img/matchiato-banner.webp" alt="Iced Matcha Latte">
-                <div>
-                    <h1>Matchiatto</h1>
-                    <p>20% Off This Week!</p>
-                    <p>Start from <span>Rp.16.000.00</span></p>
-                    <a href="#Menu"><button class="banner-button float">Order Now</button></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!---Vibe Section-->
-    <section class="vibe-container" id="Vibes">
-        <div class="vibe-section">
-            <div class="vibe-text">
-                <h1>Find a Peaceful Atmosphere for Your Cup of Coffee</h1>
-                <div>
-                    <p>Experience the warm and cozy atmosphere in our coffee shop. Every corner is designed to accompany your moments of chatting, working, or simply enjoying your favorite coffee.</p>
-                    <button>Explore Now</button>
-                </div>
-            </div>
-            <img src="img/place.webp" alt="place">
-        </div>
-    </section>
-    <!--Product Section-->
-    <section class="product-container" id="Menu">
+    .product-1 {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+    animation: scroll-left 30s linear infinite;
+}
+.product-2 {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+    animation: scroll-right 30s linear infinite;
+}
+.product-1:hover {
+    animation-play-state: paused;
+}
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes scroll-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+    </style>
+<section class="product-container" id="Menu">
         <div class="product-section">
             <div class="product-search">
                 <form action="">
@@ -141,7 +68,7 @@
                             <div class="promo">
                                 <p>20% Off</p>
                             </div>
-                            <img src="img/matcha-banner.webp" alt="">
+                            <img src="img/matcha-banner.png" alt="">
                         </div>
                         <h1>Matcha</h1>
                         <div class="price-type">
@@ -159,7 +86,7 @@
                             <div class="promo">
                                 <p>20% Off</p>
                             </div>
-                            <img src="img/matchiato-banner.webp" alt="">
+                            <img src="img/matchiato-banner.png" alt="">
                         </div>
                         <h1>Matchiatto</h1>
                         <div class="price-type">
@@ -174,7 +101,7 @@
                     <!--items 3-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/cappuchino.webp" alt="">
+                            <img src="img/cappuchino.png" alt="">
                         </div>
                         <h1>Cappuchino</h1>
                         <div class="price-type">
@@ -189,7 +116,7 @@
                     <!--items 4-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/thaitea.webp" alt="">
+                            <img src="img/thaitea.png" alt="">
                         </div>
                         <h1>Thai Tea</h1>
                         <div class="price-type">
@@ -204,7 +131,7 @@
                     <!--items 5-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/kopsuren.webp" alt="">
+                            <img src="img/kopsuren.png" alt="">
                         </div>
                         <h1>Kopsuren</h1>
                         <div class="price-type">
@@ -219,7 +146,7 @@
                     <!--items 6-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/americano.webp" alt="">
+                            <img src="img/americano.png" alt="">
                         </div>
                         <h1>Americano</h1>
                         <div class="price-type">
@@ -237,7 +164,7 @@
                             <div class="promo">
                                 <p>20% Off</p>
                             </div>
-                            <img src="img/matcha-banner.webp" alt="">
+                            <img src="img/matcha-banner.png" alt="">
                         </div>
                         <h1>Matcha</h1>
                         <div class="price-type">
@@ -255,7 +182,7 @@
                             <div class="promo">
                                 <p>20% Off</p>
                             </div>
-                            <img src="img/matchiato-banner.webp" alt="">
+                            <img src="img/matchiato-banner.png" alt="">
                         </div>
                         <h1>Matchiatto</h1>
                         <div class="price-type">
@@ -270,7 +197,7 @@
                     <!--items 3-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/cappuchino.webp" alt="">
+                            <img src="img/cappuchino.png" alt="">
                         </div>
                         <h1>Cappuchino</h1>
                         <div class="price-type">
@@ -285,7 +212,7 @@
                     <!--items 4-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/thaitea.webp" alt="">
+                            <img src="img/thaitea.png" alt="">
                         </div>
                         <h1>Thai Tea</h1>
                         <div class="price-type">
@@ -300,7 +227,7 @@
                     <!--items 5-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/kopsuren.webp" alt="">
+                            <img src="img/kopsuren.png" alt="">
                         </div>
                         <h1>Kopsuren</h1>
                         <div class="price-type">
@@ -315,7 +242,7 @@
                     <!--items 6-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/americano.webp" alt="">
+                            <img src="img/americano.png" alt="">
                         </div>
                         <h1>Americano</h1>
                         <div class="price-type">
@@ -333,7 +260,7 @@
                             <div class="promo">
                                 <p>20% Off</p>
                             </div>
-                            <img src="img/matcha-banner.webp" alt="">
+                            <img src="img/matcha-banner.png" alt="">
                         </div>
                         <h1>Matcha</h1>
                         <div class="price-type">
@@ -351,7 +278,7 @@
                             <div class="promo">
                                 <p>20% Off</p>
                             </div>
-                            <img src="img/matchiato-banner.webp" alt="">
+                            <img src="img/matchiato-banner.png" alt="">
                         </div>
                         <h1>Matchiatto</h1>
                         <div class="price-type">
@@ -366,7 +293,7 @@
                     <!--items 3-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/cappuchino.webp" alt="">
+                            <img src="img/cappuchino.png" alt="">
                         </div>
                         <h1>Cappuchino</h1>
                         <div class="price-type">
@@ -381,7 +308,7 @@
                     <!--items 4-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/thaitea.webp" alt="">
+                            <img src="img/thaitea.png" alt="">
                         </div>
                         <h1>Thai Tea</h1>
                         <div class="price-type">
@@ -396,7 +323,7 @@
                     <!--items 5-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/kopsuren.webp" alt="">
+                            <img src="img/kopsuren.png" alt="">
                         </div>
                         <h1>Kopsuren</h1>
                         <div class="price-type">
@@ -411,7 +338,7 @@
                     <!--items 6-->
                     <div class="product-items">
                         <div class="img-bg">
-                            <img src="img/americano.webp" alt="">
+                            <img src="img/americano.png" alt="">
                         </div>
                         <h1>Americano</h1>
                         <div class="price-type">
@@ -427,41 +354,3 @@
             </div>
         </div>
     </section>
-    <!--Maps-->
-    <section class="maps" id="Location">
-        <div>
-            <iframe     
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.480090917404!2d105.26835917503912!3d-5.377310254314387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40dbae8bcbf0f3%3A0x7dfb2edb507f8261!2sSukarame%2C%20Bandar%20Lampung!5e0!3m2!1sid!2sid!4v1739836287510!5m2!1sid!2sid"
-                width="100%"
-                height="400"
-                style="border:0; border-radius:12px;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    </section>
-    <footer class="footer-container">
-        <div class="footer-element">
-            <img src="img/logo.png" alt="">
-            <div class="footer-list">
-                <a href="#Home" class="transDown"><ion-icon name="home-outline"></ion-icon> Home</a>
-                <a href="#Vibes" class="transDown"><ion-icon name="book-outline"></ion-icon> Vibes</a>
-                <a href="#Menu" class="transDown"><ion-icon name="cafe-outline"></ion-icon> Menu</a>
-                <a href="#Location" class="transDown"><ion-icon name="megaphone-outline"></ion-icon> Location</a>
-            </div>
-            <div class="media-social">
-                <a href="https://twitter.com/"><ion-icon name="logo-twitter"></ion-icon></a>
-                <a href="https://facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="https://tiktok.com/"><ion-icon name="logo-tiktok"></ion-icon></a>
-            </div>
-        </div>
-        <hr>
-        <p class="licance">© Coffee Shop 2025 | Made with Love By <span>Muhamad Faidil Aziz</span></p>
-    </footer>
-    <script src="script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-</html>
-
