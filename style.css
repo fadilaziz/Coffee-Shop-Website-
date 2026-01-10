@@ -1,6 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -540,6 +541,7 @@ nav {
     padding: 20px;
     border-radius: 25px;
     overflow: hidden;
+    min-height: auto;
 }
 .product-header {
     display: flex;
@@ -577,8 +579,8 @@ nav {
     padding: 15px;
     border-radius: 20px;
     width: 98%;
-    max-height: 600px;
-    overflow-y: auto;
+    height: auto;
+    min-height: auto;
 }
 .product-items {
     border: 0px solid gray;
@@ -1568,6 +1570,7 @@ iframe {
     }
     .product-list {
         padding: 5px;
+        height: 320vh;
     }
     .product {
         width: 95%;
