@@ -60,6 +60,8 @@ nav {
     align-items: center;
 }
 .acount {
+    pointer-events: none;
+    opacity: 0.5;
     border-radius: 50px;
     padding: 7px 16px 7px 7px;
     display: flex;
@@ -98,6 +100,8 @@ nav {
     color: gray;
 }
 .acount ion-icon {
+    display: none;
+    visibility: hidden;
     width: 20px;
     height: 20px;
 }
@@ -137,25 +141,9 @@ nav {
     box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.75);
-
+    z-index: 99;
 }
-.side-bar.active {
-    width:fit-content;
-    height: 300px;
-    display: block;
-    visibility: visible;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    border-radius: 20px;
-    padding: 15px;
-    background-color: white;
-    gap: 15px;
-    box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.75);
 
-}
 .side-bar-content {
     background-color: var(--var-accets);
     padding: 10px;
@@ -549,6 +537,27 @@ nav {
     align-items: center;
     margin-bottom: 20px;
     padding: 20px 20px 0px 20px;
+}
+.product-header .banyak-produk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px 10px 30px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background-color: var(--var-primary);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.product-header .banyak-produk:hover {
+    transform: translateY(-5px);
+}
+.product-header .banyak-produk ion-icon {
+    font-size: 20px;
+    color: white;
 }
 .product-type {
     display: flex;
@@ -1049,6 +1058,7 @@ iframe {
         visibility: hidden;
     }
     .acount {
+        pointer-events: visible;
         gap: 5px;
         padding: 6px 12px 6px 6px;
     }
@@ -1063,9 +1073,29 @@ iframe {
         height: 30px;
     }
     .acount ion-icon {
+        display: block;
+        visibility: visible;
         width: 15px;
         height: 15px;
     }
+    /*Sidebar*/
+    .side-bar.active {
+    width:fit-content;
+    height: 340px;
+    display: block;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: white;
+    gap: 15px;
+    box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.75);
+
+}
     /*Acount in sidebar*/
     .acount2 {
     gap: 8px;
@@ -1570,14 +1600,14 @@ iframe {
     }
     .product-list {
         padding: 5px;
-        height: 320vh;
+        height: 263vh;
     }
     .product {
         width: 95%;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 10px; /* 6 kolom sama lebar */
         padding: 10px;
-        max-height: 800px;
+        max-height: px;
     }
     .product-items h1 {
         font-size: 20px;
