@@ -1416,6 +1416,8 @@ iframe {
         margin: 0px 30px;
     }
     .hero-section img {
+        display: none;
+        visibility: hidden;
         margin-top:20px ;
     }
     .hero-button {
@@ -1427,6 +1429,7 @@ iframe {
     /*Hero Section*/
     /*Catalog-Banner*/
     .catalog-container {
+        margin-top: 20px;
         padding: 20px 10px 20px 10px;
     }
     .catalog-section {
