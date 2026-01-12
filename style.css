@@ -40,7 +40,7 @@ nav {
     display: flex;
     padding: 20px 100px;
     background-color: white;
-    z-index: 99;
+    z-index: 98;
 }
 
 .element-1 {
@@ -671,6 +671,69 @@ nav {
     color: white;
 }
 /*Product Section*/
+
+/*More Products*/
+.more-products {
+    display: none;
+    visibility: hidden;
+    background-color: rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+.more-products div {
+    position: relative;
+    display: none;
+    visibility: hidden;
+    border-radius: 20px;
+    max-width: 2000px;
+    margin: auto;
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    padding: 30px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+.more-products.active {
+    display: block;
+    visibility: visible;
+    background-color: rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+.more-products div.active {
+    display: block;
+    visibility: visible;
+    border-radius: 20px;
+    max-width: 2000px;
+    margin: auto;
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    padding: 30px;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in-out;
+}
+/*More Products*/
+
 /*Iframe*/
 .maps {
     padding: 0px 100px;
@@ -1636,6 +1699,25 @@ iframe {
         font-size: 13px;
     }
     /*Product-Container*/
+    /*Modals more Products*/
+    .more-products {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .more-products .more-products-items {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        bottom: 0px;
+
+    }
+    .more-products-items {
+        padding: 0px;
+    }
+    /*Modlas more Products*/
     /*Maps*/
     .maps {
         padding: 0px 10px;

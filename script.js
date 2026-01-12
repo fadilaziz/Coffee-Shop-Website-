@@ -37,4 +37,12 @@ sideBarClose.addEventListener('click', ()=> {
     logOut.classList.remove('active');
 })
 
+const moreProductsButton = document.querySelector('.banyak-produk');
+const moreProducts = document.querySelector('.more-products');
+const moreitems = document.querySelector('.more-products-items');
+moreProductsButton.addEventListener('click', ()=> {
+    moreProducts.classList.add('active');
+    moreitems.classList.add('active');
+})
+
 
