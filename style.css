@@ -1588,7 +1588,7 @@ iframe {
     /*Maps*/
 }
 /*Phone L*/
-@media (max-width:430px) {
+@media (max-width:425px) {
     /*Navbar*/
     nav {
         padding: 10px 20px;
