@@ -1946,9 +1946,9 @@ iframe {
     .more-menu {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 15px;
+        gap: 7px;
         width: auto;
-        padding: 15px 15px;
+        padding: 7px 7px;
         margin: 0;
         list-style: none;
         max-height: calc(100% - 60px);
