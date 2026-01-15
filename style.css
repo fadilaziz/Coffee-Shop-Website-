@@ -1921,13 +1921,14 @@ iframe {
         padding: 20px;
         border-radius: 20px 20px 0px 0px;
         bottom: 0px;
+        max-height: 92vh;
     }
     .more-products-items {
         width: 100%;
         padding: 0px;
         position: relative;
         bottom: 10px;
-        margin-top: 100px;
+        margin-top: 40px;
     }
     .modals-type-bar {
         display: flex;
