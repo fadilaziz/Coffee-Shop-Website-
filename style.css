@@ -1841,10 +1841,19 @@ iframe {
         font-size: 14px;
     }
     .product-header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: start;
         gap: 15px;
         padding: 15px 15px 0px 15px;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+    .product-header .banyak-produk {
+        font-size: 13px;
+        padding: 5px 10px 5px 20px ;
+    }
+    .product-header ion-icon {
+        width: 20px;
     }
     .product-type {
         overflow-x: auto;
@@ -1864,7 +1873,7 @@ iframe {
     }
     .product-list {
         padding: 5px;
-        height: 263vh;
+        height: auto;
     }
     .product {
         width: 95%;
