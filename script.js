@@ -101,74 +101,155 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-const ANON_public_key ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9qcHJ5Z3ZtdXRvdW9udnNkdWJ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgxNTczMTMsImV4cCI6MjA4MzczMzMxM30._f_sYjjRMAcV6AmJ7nje4gmO-HO1LGc4WxHyoISodVo';
+const ANON_public_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9qcHJ5Z3ZtdXRvdW9udnNkdWJ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgxNTczMTMsImV4cCI6MjA4MzczMzMxM30._f_sYjjRMAcV6AmJ7nje4gmO-HO1LGc4WxHyoISodVo';
 
-function getProducts() {
-    fetch('https://ojprygvmutouonvsdubt.supabase.co/rest/v1/product?select=* &order=id &limit=12', {
-    headers: {
-        apikey: ANON_public_key,
-        Authorization: `Bearer ${ANON_public_key}`
+// Global variable to store all products
+let allProducts = [];
+
+// Function to render products based on filter
+function renderProducts(products, containerSelector) {
+    const container = document.querySelector(containerSelector);
+    container.innerHTML = ''; // Clear existing content
+    
+    if (products.length === 0) {
+        container.innerHTML = '<p class="no-products">No products found in this category.</p>';
+        container.classList.add('active');
+        return;
     }
-        })
-        .then(res => res.json())
-        .then(data => {
-            const productContainer = document.querySelector('.product');
-            data.forEach(product => {
-                console.log(product);
-                productContainer.innerHTML += `
-                    <div class="product-items">
-                        <div class="img-bg">
-                            <div class="promo">
-                                <p>20% Off</p>
-                            </div>
-                            <img src="img/${product.image_url}" alt="">
-                        </div>
-                        <h1>${product.name}</h1>
-                        <div class="price-type">
-                            <p>${product.type}</p>
-                            <p>Rp.${product.price}</p>
-                        </div>
-                            <div class="product-button">
-                                <button>Add to Cart</button>
-                            </div>
+    
+    // Remove active class to trigger fade out
+    container.classList.remove('active');
+    
+    // Add products after a short delay to allow fade out to complete
+    setTimeout(() => {
+        products.forEach(product => {
+        container.innerHTML += `
+            <div class="product-items" data-category="${product.type.toLowerCase()}">
+                <div class="img-bg">
+                    <div class="promo">
+                        <p>20% Off</p>
                     </div>
-                `;
-            })
-        })
+                    <img src="img/${product.image_url}" alt="${product.name}">
+                </div>
+                <h1>${product.name}</h1>
+                <div class="price-type">
+                    <p>${product.type}</p>
+                    <p>Rp.${product.price}</p>
+                </div>
+                <div class="product-button">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        `;
+    });
+    }, 300); // Match the fade-out duration
 }
-getProducts();
-function getMoreProducts() {
-    fetch('https://ojprygvmutouonvsdubt.supabase.co/rest/v1/product?select=* &order=id', {
-    headers: {
-        apikey: ANON_public_key,
-        Authorization: `Bearer ${ANON_public_key}`
+
+// Debounce function to limit how often a function is called
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Function to filter products by search term
+function searchProducts(searchTerm) {
+    if (!searchTerm.trim()) {
+        // If search is empty, show all products
+        const activeCategory = document.querySelector('.category-btn.active')?.dataset.category || 'all';
+        filterProducts(activeCategory);
+        return;
     }
-        })
-        .then(res => res.json())
-        .then(data => {
-            const productContainer = document.querySelector('.more-menu');
-            data.forEach(product => {
-                console.log(product);
-                productContainer.innerHTML += `
-                    <div class="product-items">
-                        <div class="img-bg">
-                            <div class="promo">
-                                <p>20% Off</p>
-                            </div>
-                            <img src="img/${product.image_url}" alt="">
-                        </div>
-                        <h1>${product.name}</h1>
-                        <div class="price-type">
-                            <p>${product.type}</p>
-                            <p>Rp.${product.price}</p>
-                        </div>
-                            <div class="product-button">
-                                <button>Add to Cart</button>
-                            </div>
-                    </div>
-                `;
-            })
-        })
+
+    const searchLower = searchTerm.toLowerCase();
+    const filtered = allProducts.filter(product => 
+        product.name.toLowerCase().includes(searchLower) ||
+        product.type.toLowerCase().includes(searchLower) ||
+        product.description?.toLowerCase().includes(searchLower) ||
+        product.tags?.some(tag => tag.toLowerCase().includes(searchLower))
+    );
+    
+    renderProducts(filtered, '.more-menu');
 }
-getMoreProducts();
+
+// Function to filter products by category
+function filterProducts(category) {
+    // Update active state of buttons
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.category === category) {
+            btn.classList.add('active');
+        }
+    });
+
+    // Filter products
+    const filteredProducts = category === 'all' 
+        ? allProducts 
+        : allProducts.filter(product => product.type.toLowerCase() === category);
+
+    // Render filtered products in the modal
+    renderProducts(filteredProducts, '.more-menu');
+}
+
+// Initialize the application
+async function initApp() {
+    try {
+        // Fetch all products
+        const response = await fetch('https://ojprygvmutouonvsdubt.supabase.co/rest/v1/product?select=*&order=id', {
+            headers: {
+                apikey: ANON_public_key,
+                Authorization: `Bearer ${ANON_public_key}`
+            }
+        });
+        
+        allProducts = await response.json();
+        
+        // Initial render
+        renderProducts(allProducts.slice(0, 12), '.product');
+        renderProducts(allProducts, '.more-menu');
+        
+        // Add event listeners to category buttons
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const category = e.target.dataset.category;
+                filterProducts(category);
+            });
+        });
+        
+    } catch (error) {
+        console.error('Error fetching products:', error);
+        document.querySelector('.product').innerHTML = '<p>Error loading products. Please try again later.</p>';
+        document.querySelector('.more-menu').innerHTML = '<p>Error loading products. Please try again later.</p>';
+    }
+}
+
+// Add search functionality
+function setupSearch() {
+    const searchInput = document.getElementById('modalSearchInput');
+    if (searchInput) {
+        const debouncedSearch = debounce(() => {
+            searchProducts(searchInput.value);
+        }, 300);
+
+        searchInput.addEventListener('input', debouncedSearch);
+        
+        // Clear search when clicking on category buttons
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                searchInput.value = '';
+            });
+        });
+    }
+}
+
+// Start the application
+initApp().then(() => {
+    setupSearch();
+});
 

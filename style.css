@@ -604,6 +604,7 @@ nav {
     background-color: white;
     padding: 15px;
     transition: all 0.3s ease;
+    height: fit-content;
 }
 .product-items:hover {
     border-radius: 25px;
@@ -877,6 +878,21 @@ nav {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 20px;
     width: auto;
+    height: 62vh;
+    padding: 20px 20px;
+    margin: 0;
+    list-style: none;
+    max-height: calc(100% - 60px);
+    overflow-y: auto;
+    margin: 20px 0px 0px 0px;
+}
+
+.more-menu.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 62vh;
     padding: 20px 20px;
     margin: 0;
     list-style: none;
@@ -1939,7 +1955,7 @@ iframe {
         display: flex;
         align-items: center;
         gap: 8px;
-        padding: 0;
+        padding: 5px;
         margin-top: 15px;
         flex-wrap: nowrap;
         overflow-x: scroll;
@@ -1958,7 +1974,21 @@ iframe {
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         gap: 7px;
         width: auto;
+        height: 80vh;
         padding: 7px 7px;
+        margin: 0;
+        list-style: none;
+        max-height: calc(100% - 60px);
+        overflow-y: auto;
+        margin: 20px 0px 0px 0px;
+    }
+    .more-menu.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 70vh;
+        padding: 20px 20px;
         margin: 0;
         list-style: none;
         max-height: calc(100% - 60px);
