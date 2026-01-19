@@ -221,104 +221,112 @@ function setupSearch() {
     }
 }
 
-// Notification Panel Functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const notificationBtn = document.querySelector('.notification-btn');
+// Shared functions for panel management
+function toggleNotificationPanel() {
     const notificationPanel = document.querySelector('.notification-panel');
-    const closeNotification = document.querySelector('.close-notification');
+    const profilePanel = document.querySelector('.profile-panel');
     const notificationBadge = document.querySelector('.notification-badge');
     
     // Toggle notification panel
-    function toggleNotificationPanel() {
-        notificationPanel.classList.toggle('active');
-        
-        // If opening the panel, clear the badge
-        if (notificationPanel.classList.contains('active')) {
+    notificationPanel.classList.toggle('active');
+    
+    // Close profile panel if it's open
+    if (profilePanel.classList.contains('active')) {
+        profilePanel.classList.remove('active');
+    }
+    
+    // If opening the panel, clear the badge
+    if (notificationPanel.classList.contains('active')) {
+        if (notificationBadge) {
             notificationBadge.style.animation = 'none';
             notificationBadge.style.display = 'none';
-            
-            // Mark all notifications as read
-            document.querySelectorAll('.notification-item.unread').forEach(item => {
-                item.classList.remove('unread');
+        }
+        
+        // Mark all notifications as read
+        document.querySelectorAll('.notification-item.unread').forEach(item => {
+            item.classList.remove('unread');
+        });
+    }
+}
+
+function toggleProfilePanel() {
+    const notificationPanel = document.querySelector('.notification-panel');
+    const profilePanel = document.querySelector('.profile-panel');
+    const profileBadge = document.querySelector('.profile-badge');
+    
+    // Toggle profile panel
+    profilePanel.classList.toggle('active');
+    
+    // Close notification panel if it's open
+    if (notificationPanel.classList.contains('active')) {
+        notificationPanel.classList.remove('active');
+    }
+    
+    // If opening the panel, clear the badge
+    if (profilePanel.classList.contains('active') && profileBadge) {
+        profileBadge.style.animation = 'none';
+        profileBadge.style.display = 'none';
+    }
+}
+
+function handleClickOutside(e) {
+    const notificationBtn = document.querySelector('.notification-btn');
+    const profileBtn = document.querySelector('.profile-btn');
+    const notificationPanel = document.querySelector('.notification-panel');
+    const profilePanel = document.querySelector('.profile-panel');
+    
+    // Close notification panel if clicking outside
+    if (notificationPanel && !notificationPanel.contains(e.target) && !notificationBtn.contains(e.target)) {
+        notificationPanel.classList.remove('active');
+    }
+    
+    // Close profile panel if clicking outside
+    if (profilePanel && !profilePanel.contains(e.target) && !profileBtn.contains(e.target)) {
+        profilePanel.classList.remove('active');
+    }
+}
+
+// Initialize panels
+document.addEventListener('DOMContentLoaded', () => {
+    // Notification panel elements
+    const notificationBtn = document.querySelector('.notification-btn');
+    const notificationPanel = document.querySelector('.notification-panel');
+    const closeNotification = document.querySelector('.close-notification');
+    
+    // Profile panel elements
+    const profileBtn = document.querySelector('.profile-btn');
+    const profilePanel = document.querySelector('.profile-panel');
+    const closeProfile = document.querySelector('.close-profile');
+    
+    // Add event listeners for notification panel
+    if (notificationBtn && notificationPanel) {
+        notificationBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleNotificationPanel();
+        });
+        
+        if (closeNotification) {
+            closeNotification.addEventListener('click', (e) => {
+                e.stopPropagation();
+                notificationPanel.classList.remove('active');
             });
         }
     }
     
-    // Event Listeners
-    notificationBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleNotificationPanel();
-    });
-    
-    closeNotification.addEventListener('click', (e) => {
-        e.stopPropagation();
-        notificationPanel.classList.remove('active');
-    });
-    
-    // Close panel when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!notificationPanel.contains(e.target) && !notificationBtn.contains(e.target)) {
-            notificationPanel.classList.remove('active');
-        }
-    });
-    
-    // Prevent panel from closing when clicking inside it
-    notificationPanel.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
-    
-    // Add click effect to notification items
-    document.querySelectorAll('.notification-item').forEach(item => {
-        item.addEventListener('click', function() {
-            this.classList.add('clicked');
-            setTimeout(() => {
-                this.classList.remove('clicked');
-            }, 200);
+    // Add event listeners for profile panel
+    if (profileBtn && profilePanel) {
+        profileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleProfilePanel();
         });
-    });
-});
-
-// Notification Panel Functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const notificationBtn = document.querySelector('.profile-btn');
-    const notificationPanel = document.querySelector('.profile-panel');
-    const closeNotification = document.querySelector('.close-profile');
-    const notificationBadge = document.querySelector('.profile-badge');
-    
-    // Toggle notification panel
-    function toggleNotificationPanel() {
-        notificationPanel.classList.toggle('active');
         
-        // If opening the panel, clear the badge
-        if (notificationPanel.classList.contains('active')) {
-            notificationBadge.style.animation = 'none';
-            notificationBadge.style.display = 'none';
-            
+        if (closeProfile) {
+            closeProfile.addEventListener('click', (e) => {
+                e.stopPropagation();
+                profilePanel.classList.remove('active');
+            });
         }
     }
-
-    // Event Listeners
-    notificationBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleNotificationPanel();
-    });
-    
-    closeNotification.addEventListener('click', (e) => {
-        e.stopPropagation();
-        notificationPanel.classList.remove('active');
-    });
-    
-    // Close panel when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!notificationPanel.contains(e.target) && !notificationBtn.contains(e.target)) {
-            notificationPanel.classList.remove('active');
-        }
-    });
-    
-    // Prevent panel from closing when clicking inside it
-    notificationPanel.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
     
     // Add click effect to notification items
     document.querySelectorAll('.notification-item').forEach(item => {
@@ -329,6 +337,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 200);
         });
     });
+    
+    // Add click outside handler
+    document.addEventListener('click', handleClickOutside);
+    
+    // Prevent panels from closing when clicking inside them
+    if (notificationPanel) {
+        notificationPanel.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+    
+    if (profilePanel) {
+        profilePanel.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
 });
 
 // Start the application
