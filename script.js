@@ -14,33 +14,6 @@ window.addEventListener('scroll', ()=> {
     }
 });
 
-//Sidebar
-const openSideButton = document.querySelector('.acount');
-const sideBar = document.querySelector('.side-bar');
-const acount = document.querySelector('.acount');
-const acount2 = document.querySelector('.acount2');
-const sideBarContent = document.querySelector('.side-bar-content');
-const logOut = document.querySelector('.side-bar-logout');
-console.log(sideBarContent);
-
-//Sidebar Open
-openSideButton.addEventListener('click', ()=> {
-    acount.classList.add('hidden');
-    sideBar.classList.add('active');
-    sideBarContent.classList.add('active');
-    acount2.classList.add('active');
-    logOut.classList.add('active');
-})
-//Sidebar Close 
-const sideBarClose = document.querySelector('.side-bar-close');
-sideBarClose.addEventListener('click', ()=> {
-    acount.classList.remove('hidden');
-    sideBar.classList.remove('active');
-    sideBarContent.classList.remove('active');
-    acount2.classList.remove('active');
-    logOut.classList.remove('active');
-})
-
 const moreProductsButton = document.querySelector('.banyak-produk');
 const moreProducts = document.querySelector('.more-products');
 const moreitems = document.querySelector('.more-products-items');
@@ -129,7 +102,7 @@ function renderProducts(products, containerSelector) {
                     <div class="promo">
                         <p>20% Off</p>
                     </div>
-                    <img src="img/${product.image_url}" alt="${product.name}">
+                    <img src="img/${product.image_url}" alt="${product.name}" loading="lazy" decoding="async">
                 </div>
                 <h1>${product.name}</h1>
                 <div class="price-type">
@@ -271,6 +244,59 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    // Event Listeners
+    notificationBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleNotificationPanel();
+    });
+    
+    closeNotification.addEventListener('click', (e) => {
+        e.stopPropagation();
+        notificationPanel.classList.remove('active');
+    });
+    
+    // Close panel when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!notificationPanel.contains(e.target) && !notificationBtn.contains(e.target)) {
+            notificationPanel.classList.remove('active');
+        }
+    });
+    
+    // Prevent panel from closing when clicking inside it
+    notificationPanel.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+    
+    // Add click effect to notification items
+    document.querySelectorAll('.notification-item').forEach(item => {
+        item.addEventListener('click', function() {
+            this.classList.add('clicked');
+            setTimeout(() => {
+                this.classList.remove('clicked');
+            }, 200);
+        });
+    });
+});
+
+// Notification Panel Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const notificationBtn = document.querySelector('.profile-btn');
+    const notificationPanel = document.querySelector('.profile-panel');
+    const closeNotification = document.querySelector('.close-profile');
+    const notificationBadge = document.querySelector('.profile-badge');
+    
+    // Toggle notification panel
+    function toggleNotificationPanel() {
+        notificationPanel.classList.toggle('active');
+        
+        // If opening the panel, clear the badge
+        if (notificationPanel.classList.contains('active')) {
+            notificationBadge.style.animation = 'none';
+            notificationBadge.style.display = 'none';
+            
+        }
+    }
+
     // Event Listeners
     notificationBtn.addEventListener('click', (e) => {
         e.stopPropagation();
