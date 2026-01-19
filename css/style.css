@@ -1781,7 +1781,7 @@ iframe {
         padding: 0px 10px;
     }
     .vibe-section {
-        background-image: url(img/place-grayscale.webp);
+        background-image: url(../img/place-grayscale.webp);
         background-position: center;
         display: flex;
         flex-direction: column;

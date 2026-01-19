@@ -248,6 +248,63 @@ function setupSearch() {
     }
 }
 
+// Notification Panel Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const notificationBtn = document.querySelector('.notification-btn');
+    const notificationPanel = document.querySelector('.notification-panel');
+    const closeNotification = document.querySelector('.close-notification');
+    const notificationBadge = document.querySelector('.notification-badge');
+    
+    // Toggle notification panel
+    function toggleNotificationPanel() {
+        notificationPanel.classList.toggle('active');
+        
+        // If opening the panel, clear the badge
+        if (notificationPanel.classList.contains('active')) {
+            notificationBadge.style.animation = 'none';
+            notificationBadge.style.display = 'none';
+            
+            // Mark all notifications as read
+            document.querySelectorAll('.notification-item.unread').forEach(item => {
+                item.classList.remove('unread');
+            });
+        }
+    }
+    
+    // Event Listeners
+    notificationBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleNotificationPanel();
+    });
+    
+    closeNotification.addEventListener('click', (e) => {
+        e.stopPropagation();
+        notificationPanel.classList.remove('active');
+    });
+    
+    // Close panel when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!notificationPanel.contains(e.target) && !notificationBtn.contains(e.target)) {
+            notificationPanel.classList.remove('active');
+        }
+    });
+    
+    // Prevent panel from closing when clicking inside it
+    notificationPanel.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+    
+    // Add click effect to notification items
+    document.querySelectorAll('.notification-item').forEach(item => {
+        item.addEventListener('click', function() {
+            this.classList.add('clicked');
+            setTimeout(() => {
+                this.classList.remove('clicked');
+            }, 200);
+        });
+    });
+});
+
 // Start the application
 initApp().then(() => {
     setupSearch();

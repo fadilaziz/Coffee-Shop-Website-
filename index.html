@@ -17,7 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiny5&display=swap" rel="stylesheet">
     <!--Style CSS-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/notification-styles.css">
     <title>Coffee Shop</title>
 </head>
 <body>
@@ -61,10 +62,59 @@
                 <a class="float-down" href="#Vibes">Vibes</a>
                 <a class="float-down" href="#Menu">Menu</a>
                 <a class="float-down" href="#Location">Location</a>
-                <ion-icon name="notifications-outline"></ion-icon>
+                <button class="notification-btn">
+                    <ion-icon name="notifications-outline"></ion-icon>
+                    <span class="notification-badge">3</span>
+                </button>
             </ul>
         </div>
     </nav>
+    
+    <!-- Notification Panel -->
+    <div class="notification-panel">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button class="close-notification">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="notification-list">
+            <div class="notification-item unread">
+                <div class="notification-icon">
+                    <ion-icon name="cafe-outline"></ion-icon>
+                </div>
+                <div class="notification-content">
+                    <p class="notification-title">New Coffee Blend Available</p>
+                    <p class="notification-text">Try our new Summer Blend coffee with hints of citrus and chocolate.</p>
+                    <span class="notification-time">2 minutes ago</span>
+                </div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-icon">
+                    <ion-icon name="pricetag-outline"></ion-icon>
+                </div>
+                <div class="notification-content">
+                    <p class="notification-title">Special Offer</p>
+                    <p class="notification-text">Get 20% off on all beverages this weekend!</p>
+                    <span class="notification-time">1 hour ago</span>
+                </div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-icon">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                </div>
+                <div class="notification-content">
+                    <p class="notification-title">Order Confirmed</p>
+                    <p class="notification-text">Your order #12345 has been confirmed and will be ready in 15 minutes.</p>
+                    <span class="notification-time">3 hours ago</span>
+                </div>
+            </div>
+        </div>
+        <div class="notification-footer">
+            <a href="#" class="view-all">View all notifications</a>
+        </div>
+    </div>
+    
     <!--Hero Section-->
     <section class="hero-container" id="Home">
         <img class="coffee-image-1 bounce" src="img/biji-kopi.webp" alt="coffee-image">
