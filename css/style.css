@@ -1900,7 +1900,7 @@ iframe {
         list-style: none;
         max-height: calc(100% - 60px);
         overflow-y: auto;
-        margin: 20px 0px 0px 0px;
+        margin: 60px 0px 0px 0px;
     }
     .more-menu.active {
         display: flex;
